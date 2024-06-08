@@ -21,7 +21,7 @@
 		mouseX.set(clientX - left);
 		mouseY.set(clientY - top);
 
-		const str = generateRandomString(1500);
+		const str = generateRandomString(5000);
 		randomString = str;
 	}
 
@@ -55,7 +55,7 @@
 			<Motion let:motion {style}>
 				<div
 					use:motion
-					class="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-500 to-blue-700 opacity-0 backdrop-blur-xl transition duration-500 group-hover/card:opacity-100"
+					class="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-500 to-blue-700 opacity-0 backdrop-blur-sm transition duration-500 group-hover/card:opacity-50"
 				/>
 			</Motion>
 			<Motion let:motion {style}>
@@ -64,14 +64,14 @@
 					class="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay group-hover/card:opacity-100"
 				>
 					<p
-						class="absolute inset-x-0 h-full whitespace-pre-wrap break-words font-mono text-xs font-bold text-white transition duration-500"
+						class="absolute inset-x-0 h-full whitespace-pre-wrap break-words font-mono text-3xl font-bold text-white transition duration-500"
 					>
 						{randomString}
 					</p>
 				</div>
 			</Motion>
 		</div>
-		<div class="relative z-10 flex items-center justify-center">
+		<!-- <div class="relative z-10 flex items-center justify-center">
 			<div
 				class="relative flex h-44 w-44 items-center justify-center rounded-full text-4xl font-bold text-white"
 			>
@@ -82,6 +82,6 @@
 					<span class="z-20 text-black dark:text-white">{text}</span>
 				{/if}
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
